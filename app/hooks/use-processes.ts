@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-type Status = "approved" | "needs_fix" | "pending";
+
+export type Status = "approved" | "needs_fix" | "pending";
 
 type Item = {
   id: string;
@@ -12,18 +13,20 @@ type Item = {
 
 type Task = Item & {
   subprocessId: string;
+  isReviewed?: boolean;
 };
 
 type Subprocess = Item & {
   processId: string;
   taskIds: string[];
+  isReviewed?: boolean;
 };
 
 type Process = Item & {
   subprocessIds: string[];
 };
 
-type ProcessesResponse = {
+export type ProcessesResponse = {
   processes: Record<string, Process>;
   subprocesses: Record<string, Subprocess>;
   tasks: Record<string, Task>;
