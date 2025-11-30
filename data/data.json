@@ -1,0 +1,564 @@
+{
+  "processes": {
+    "PROC-001": {
+      "id": "PROC-001",
+      "name": "API Synthesis and Purification",
+      "description": "Complete process for synthesizing and purifying the Active Pharmaceutical Ingredient (API) from raw materials",
+      "status": "approved",
+      "subprocessIds": ["SUBP-001-01", "SUBP-001-02", "SUBP-001-03"],
+      "lastUpdatedBy": "Dr. Sarah Chen",
+      "lastUpdatedAt": "2024-11-15T09:30:00Z"
+    },
+    "PROC-002": {
+      "id": "PROC-002",
+      "name": "Formulation and Manufacturing",
+      "description": "Process of combining API with excipients and manufacturing final dosage forms",
+      "status": "approved",
+      "subprocessIds": ["SUBP-002-01", "SUBP-002-02", "SUBP-002-03"],
+      "lastUpdatedBy": "Dr. Jennifer Lee",
+      "lastUpdatedAt": "2024-11-18T14:00:00Z"
+    },
+    "PROC-003": {
+      "id": "PROC-003",
+      "name": "Quality Control and Packaging",
+      "description": "Final quality testing and primary/secondary packaging of finished dosage forms",
+      "status": "needs_fix",
+      "subprocessIds": ["SUBP-003-01", "SUBP-003-02", "SUBP-003-03"],
+      "lastUpdatedBy": "Dr. Thomas Anderson",
+      "lastUpdatedAt": "2024-11-20T10:30:00Z"
+    }
+  },
+  "subprocesses": {
+    "SUBP-001-01": {
+      "id": "SUBP-001-01",
+      "processId": "PROC-001",
+      "name": "Chemical Synthesis",
+      "description": "Multi-step chemical synthesis of the API using controlled reaction conditions",
+      "status": "approved",
+      "taskIds": [
+        "TASK-001-01-01",
+        "TASK-001-01-02",
+        "TASK-001-01-03",
+        "TASK-001-01-04",
+        "TASK-001-01-05"
+      ],
+      "lastUpdatedBy": "Dr. Michael Rodriguez",
+      "lastUpdatedAt": "2024-11-14T14:20:00Z"
+    },
+    "SUBP-001-02": {
+      "id": "SUBP-001-02",
+      "processId": "PROC-001",
+      "name": "Purification and Crystallization",
+      "description": "Isolation and purification of crude API to achieve required purity specifications",
+      "status": "approved",
+      "taskIds": [
+        "TASK-001-02-01",
+        "TASK-001-02-02",
+        "TASK-001-02-03",
+        "TASK-001-02-04"
+      ],
+      "lastUpdatedBy": "Dr. Sarah Chen",
+      "lastUpdatedAt": "2024-11-15T09:30:00Z"
+    },
+    "SUBP-001-03": {
+      "id": "SUBP-001-03",
+      "processId": "PROC-001",
+      "name": "Drying and Milling",
+      "description": "Final drying and particle size reduction of purified API",
+      "status": "needs_fix",
+      "taskIds": [
+        "TASK-001-03-01",
+        "TASK-001-03-02",
+        "TASK-001-03-03",
+        "TASK-001-03-04"
+      ],
+      "lastUpdatedBy": "Dr. Sarah Chen",
+      "lastUpdatedAt": "2024-11-15T11:00:00Z"
+    },
+    "SUBP-002-01": {
+      "id": "SUBP-002-01",
+      "processId": "PROC-002",
+      "name": "Pre-formulation and Blending",
+      "description": "Preparation of API-excipient blend with uniform distribution",
+      "status": "approved",
+      "taskIds": [
+        "TASK-002-01-01",
+        "TASK-002-01-02",
+        "TASK-002-01-03",
+        "TASK-002-01-04",
+        "TASK-002-01-05",
+        "TASK-002-01-06"
+      ],
+      "lastUpdatedBy": "Dr. Jennifer Lee",
+      "lastUpdatedAt": "2024-11-17T16:30:00Z"
+    },
+    "SUBP-002-02": {
+      "id": "SUBP-002-02",
+      "processId": "PROC-002",
+      "name": "Tablet Compression",
+      "description": "Compression of granulated blend into tablets with defined specifications",
+      "status": "approved",
+      "taskIds": [
+        "TASK-002-02-01",
+        "TASK-002-02-02",
+        "TASK-002-02-03",
+        "TASK-002-02-04"
+      ],
+      "lastUpdatedBy": "Dr. Jennifer Lee",
+      "lastUpdatedAt": "2024-11-18T14:00:00Z"
+    },
+    "SUBP-002-03": {
+      "id": "SUBP-002-03",
+      "processId": "PROC-002",
+      "name": "Coating and Finishing",
+      "description": "Application of film coating and final finishing operations",
+      "status": "pending",
+      "taskIds": [
+        "TASK-002-03-01",
+        "TASK-002-03-02",
+        "TASK-002-03-03",
+        "TASK-002-03-04",
+        "TASK-002-03-05"
+      ],
+      "lastUpdatedBy": "Dr. Jennifer Lee",
+      "lastUpdatedAt": "2024-11-18T15:00:00Z"
+    },
+    "SUBP-003-01": {
+      "id": "SUBP-003-01",
+      "processId": "PROC-003",
+      "name": "Final Quality Testing",
+      "description": "Comprehensive quality control testing of finished product",
+      "status": "needs_fix",
+      "taskIds": [
+        "TASK-003-01-01",
+        "TASK-003-01-02",
+        "TASK-003-01-03",
+        "TASK-003-01-04"
+      ],
+      "lastUpdatedBy": "Dr. Thomas Anderson",
+      "lastUpdatedAt": "2024-11-20T10:30:00Z"
+    },
+    "SUBP-003-02": {
+      "id": "SUBP-003-02",
+      "processId": "PROC-003",
+      "name": "Primary Packaging",
+      "description": "Blister packaging or bottle filling of finished tablets",
+      "status": "pending",
+      "taskIds": [
+        "TASK-003-02-01",
+        "TASK-003-02-02",
+        "TASK-003-02-03",
+        "TASK-003-02-04",
+        "TASK-003-02-05"
+      ],
+      "lastUpdatedBy": "David Miller",
+      "lastUpdatedAt": "2024-11-20T11:00:00Z"
+    },
+    "SUBP-003-03": {
+      "id": "SUBP-003-03",
+      "processId": "PROC-003",
+      "name": "Secondary Packaging and Labeling",
+      "description": "Cartoning, labeling, and preparation for distribution",
+      "status": "pending",
+      "taskIds": [
+        "TASK-003-03-01",
+        "TASK-003-03-02",
+        "TASK-003-03-03",
+        "TASK-003-03-04",
+        "TASK-003-03-05",
+        "TASK-003-03-06"
+      ],
+      "lastUpdatedBy": "David Miller",
+      "lastUpdatedAt": "2024-11-20T11:30:00Z"
+    }
+  },
+  "tasks": {
+    "TASK-001-01-01": {
+      "id": "TASK-001-01-01",
+      "subprocessId": "SUBP-001-01",
+      "name": "Raw Material Dispensing",
+      "description": "Accurate weighing and dispensing of starting materials and reagents according to batch formula",
+      "status": "approved",
+      "lastUpdatedBy": "James Wilson",
+      "lastUpdatedAt": "2024-11-10T08:15:00Z"
+    },
+    "TASK-001-01-02": {
+      "id": "TASK-001-01-02",
+      "subprocessId": "SUBP-001-01",
+      "name": "Reaction Setup",
+      "description": "Configure reaction vessel with temperature control, stirring mechanism, and inert atmosphere",
+      "status": "approved",
+      "lastUpdatedBy": "James Wilson",
+      "lastUpdatedAt": "2024-11-10T10:45:00Z"
+    },
+    "TASK-001-01-03": {
+      "id": "TASK-001-01-03",
+      "subprocessId": "SUBP-001-01",
+      "name": "Controlled Addition",
+      "description": "Sequential addition of reagents with real-time monitoring of temperature and pH",
+      "status": "approved",
+      "lastUpdatedBy": "Dr. Michael Rodriguez",
+      "lastUpdatedAt": "2024-11-11T11:30:00Z"
+    },
+    "TASK-001-01-04": {
+      "id": "TASK-001-01-04",
+      "subprocessId": "SUBP-001-01",
+      "name": "Reaction Monitoring",
+      "description": "HPLC sampling and analysis to track reaction progress and completion",
+      "status": "approved",
+      "lastUpdatedBy": "Dr. Emily Park",
+      "lastUpdatedAt": "2024-11-12T16:00:00Z"
+    },
+    "TASK-001-01-05": {
+      "id": "TASK-001-01-05",
+      "subprocessId": "SUBP-001-01",
+      "name": "Quenching and Workup",
+      "description": "Safe termination of reaction and initial separation of product from reaction mixture",
+      "status": "approved",
+      "lastUpdatedBy": "James Wilson",
+      "lastUpdatedAt": "2024-11-13T09:20:00Z"
+    },
+    "TASK-001-02-01": {
+      "id": "TASK-001-02-01",
+      "subprocessId": "SUBP-001-02",
+      "name": "Solvent Extraction",
+      "description": "Liquid-liquid extraction to remove impurities and isolate crude product",
+      "status": "approved",
+      "lastUpdatedBy": "Maria Santos",
+      "lastUpdatedAt": "2024-11-13T13:45:00Z"
+    },
+    "TASK-001-02-02": {
+      "id": "TASK-001-02-02",
+      "subprocessId": "SUBP-001-02",
+      "name": "Column Chromatography",
+      "description": "Silica gel chromatographic separation for intermediate purification",
+      "status": "approved",
+      "lastUpdatedBy": "Dr. Emily Park",
+      "lastUpdatedAt": "2024-11-14T10:15:00Z"
+    },
+    "TASK-001-02-03": {
+      "id": "TASK-001-02-03",
+      "subprocessId": "SUBP-001-02",
+      "name": "Recrystallization",
+      "description": "Controlled crystallization from optimal solvent system to achieve final purity",
+      "status": "approved",
+      "lastUpdatedBy": "Maria Santos",
+      "lastUpdatedAt": "2024-11-14T15:30:00Z"
+    },
+    "TASK-001-02-04": {
+      "id": "TASK-001-02-04",
+      "subprocessId": "SUBP-001-02",
+      "name": "Filtration and Washing",
+      "description": "Vacuum filtration and washing of crystals to remove residual impurities",
+      "status": "approved",
+      "lastUpdatedBy": "James Wilson",
+      "lastUpdatedAt": "2024-11-15T08:00:00Z"
+    },
+    "TASK-001-03-01": {
+      "id": "TASK-001-03-01",
+      "subprocessId": "SUBP-001-03",
+      "name": "Vacuum Drying",
+      "description": "Controlled vacuum drying at specified temperature to remove residual solvents",
+      "status": "approved",
+      "lastUpdatedBy": "Robert Kumar",
+      "lastUpdatedAt": "2024-11-15T09:00:00Z"
+    },
+    "TASK-001-03-02": {
+      "id": "TASK-001-03-02",
+      "subprocessId": "SUBP-001-03",
+      "name": "LOD Testing",
+      "description": "Loss on drying test to verify moisture content meets specifications",
+      "status": "needs_fix",
+      "lastUpdatedBy": "Dr. Emily Park",
+      "lastUpdatedAt": "2024-11-15T10:30:00Z"
+    },
+    "TASK-001-03-03": {
+      "id": "TASK-001-03-03",
+      "subprocessId": "SUBP-001-03",
+      "name": "Milling and Sieving",
+      "description": "Controlled milling to achieve target particle size distribution",
+      "status": "pending",
+      "lastUpdatedBy": "Robert Kumar",
+      "lastUpdatedAt": "2024-11-15T11:00:00Z"
+    },
+    "TASK-001-03-04": {
+      "id": "TASK-001-03-04",
+      "subprocessId": "SUBP-001-03",
+      "name": "Final API Storage",
+      "description": "Transfer purified API to labeled containers and storage under controlled conditions",
+      "status": "pending",
+      "lastUpdatedBy": "Maria Santos",
+      "lastUpdatedAt": "2024-11-15T11:00:00Z"
+    },
+    "TASK-002-01-01": {
+      "id": "TASK-002-01-01",
+      "subprocessId": "SUBP-002-01",
+      "name": "Excipient Screening",
+      "description": "Verification and approval of all excipients against COA and specifications",
+      "status": "approved",
+      "lastUpdatedBy": "Linda Thompson",
+      "lastUpdatedAt": "2024-11-16T09:00:00Z"
+    },
+    "TASK-002-01-02": {
+      "id": "TASK-002-01-02",
+      "subprocessId": "SUBP-002-01",
+      "name": "Pre-mixing",
+      "description": "Geometric dilution mixing of API with primary excipients",
+      "status": "approved",
+      "lastUpdatedBy": "Ahmed Hassan",
+      "lastUpdatedAt": "2024-11-16T13:20:00Z"
+    },
+    "TASK-002-01-03": {
+      "id": "TASK-002-01-03",
+      "subprocessId": "SUBP-002-01",
+      "name": "High-Shear Granulation",
+      "description": "Wet granulation process to improve flow and compressibility",
+      "status": "approved",
+      "lastUpdatedBy": "Ahmed Hassan",
+      "lastUpdatedAt": "2024-11-17T10:15:00Z"
+    },
+    "TASK-002-01-04": {
+      "id": "TASK-002-01-04",
+      "subprocessId": "SUBP-002-01",
+      "name": "Drying and Sizing",
+      "description": "Fluid bed drying and screening of granules to target specifications",
+      "status": "approved",
+      "lastUpdatedBy": "Robert Kumar",
+      "lastUpdatedAt": "2024-11-17T14:45:00Z"
+    },
+    "TASK-002-01-05": {
+      "id": "TASK-002-01-05",
+      "subprocessId": "SUBP-002-01",
+      "name": "Final Blending",
+      "description": "Addition of lubricants and final blending in V-blender",
+      "status": "approved",
+      "lastUpdatedBy": "Ahmed Hassan",
+      "lastUpdatedAt": "2024-11-17T16:30:00Z"
+    },
+    "TASK-002-01-06": {
+      "id": "TASK-002-01-06",
+      "subprocessId": "SUBP-002-01",
+      "name": "Blend Uniformity Testing",
+      "description": "Sampling and assay of blend to verify content uniformity",
+      "status": "approved",
+      "lastUpdatedBy": "Dr. Emily Park",
+      "lastUpdatedAt": "2024-11-17T18:00:00Z"
+    },
+    "TASK-002-02-01": {
+      "id": "TASK-002-02-01",
+      "subprocessId": "SUBP-002-02",
+      "name": "Machine Setup and Qualification",
+      "description": "Setup and qualification of tablet press with appropriate tooling",
+      "status": "approved",
+      "lastUpdatedBy": "Carlos Rivera",
+      "lastUpdatedAt": "2024-11-18T08:00:00Z"
+    },
+    "TASK-002-02-02": {
+      "id": "TASK-002-02-02",
+      "subprocessId": "SUBP-002-02",
+      "name": "Compression Run",
+      "description": "Continuous tablet compression with in-process monitoring",
+      "status": "approved",
+      "lastUpdatedBy": "Carlos Rivera",
+      "lastUpdatedAt": "2024-11-18T12:30:00Z"
+    },
+    "TASK-002-02-03": {
+      "id": "TASK-002-02-03",
+      "subprocessId": "SUBP-002-02",
+      "name": "IPC Testing",
+      "description": "In-process control testing for weight, thickness, hardness, and friability",
+      "status": "approved",
+      "lastUpdatedBy": "Linda Thompson",
+      "lastUpdatedAt": "2024-11-18T13:00:00Z"
+    },
+    "TASK-002-02-04": {
+      "id": "TASK-002-02-04",
+      "subprocessId": "SUBP-002-02",
+      "name": "Tablet Collection",
+      "description": "Collection and quarantine of compressed tablets for coating",
+      "status": "approved",
+      "lastUpdatedBy": "Carlos Rivera",
+      "lastUpdatedAt": "2024-11-18T14:00:00Z"
+    },
+    "TASK-002-03-01": {
+      "id": "TASK-002-03-01",
+      "subprocessId": "SUBP-002-03",
+      "name": "Coating Solution Preparation",
+      "description": "Preparation and verification of film coating suspension",
+      "status": "approved",
+      "lastUpdatedBy": "Ahmed Hassan",
+      "lastUpdatedAt": "2024-11-18T14:30:00Z"
+    },
+    "TASK-002-03-02": {
+      "id": "TASK-002-03-02",
+      "subprocessId": "SUBP-002-03",
+      "name": "Film Coating Application",
+      "description": "Application of film coating in perforated pan coater",
+      "status": "pending",
+      "lastUpdatedBy": "Carlos Rivera",
+      "lastUpdatedAt": "2024-11-18T15:00:00Z"
+    },
+    "TASK-002-03-03": {
+      "id": "TASK-002-03-03",
+      "subprocessId": "SUBP-002-03",
+      "name": "Coating Quality Inspection",
+      "description": "Visual inspection and weight gain verification of coated tablets",
+      "status": "pending",
+      "lastUpdatedBy": "Linda Thompson",
+      "lastUpdatedAt": "2024-11-18T15:00:00Z"
+    },
+    "TASK-002-03-04": {
+      "id": "TASK-002-03-04",
+      "subprocessId": "SUBP-002-03",
+      "name": "Polishing",
+      "description": "Tablet polishing to remove coating dust and improve appearance",
+      "status": "pending",
+      "lastUpdatedBy": "Carlos Rivera",
+      "lastUpdatedAt": "2024-11-18T15:00:00Z"
+    },
+    "TASK-002-03-05": {
+      "id": "TASK-002-03-05",
+      "subprocessId": "SUBP-002-03",
+      "name": "Bulk Storage",
+      "description": "Transfer coated tablets to labeled containers for quarantine",
+      "status": "pending",
+      "lastUpdatedBy": "Maria Santos",
+      "lastUpdatedAt": "2024-11-18T15:00:00Z"
+    },
+    "TASK-003-01-01": {
+      "id": "TASK-003-01-01",
+      "subprocessId": "SUBP-003-01",
+      "name": "Appearance and Identification",
+      "description": "Visual inspection and identity testing by FTIR/UV spectroscopy",
+      "status": "approved",
+      "lastUpdatedBy": "Dr. Emily Park",
+      "lastUpdatedAt": "2024-11-19T09:00:00Z"
+    },
+    "TASK-003-01-02": {
+      "id": "TASK-003-01-02",
+      "subprocessId": "SUBP-003-01",
+      "name": "Assay and Related Substances",
+      "description": "HPLC analysis for content and impurity profile",
+      "status": "approved",
+      "lastUpdatedBy": "Dr. Emily Park",
+      "lastUpdatedAt": "2024-11-19T14:30:00Z"
+    },
+    "TASK-003-01-03": {
+      "id": "TASK-003-01-03",
+      "subprocessId": "SUBP-003-01",
+      "name": "Dissolution Testing",
+      "description": "Multi-point dissolution testing to verify release profile",
+      "status": "needs_fix",
+      "lastUpdatedBy": "Dr. Thomas Anderson",
+      "lastUpdatedAt": "2024-11-20T10:00:00Z"
+    },
+    "TASK-003-01-04": {
+      "id": "TASK-003-01-04",
+      "subprocessId": "SUBP-003-01",
+      "name": "Microbial Testing",
+      "description": "Total aerobic count and absence of specified microorganisms",
+      "status": "pending",
+      "lastUpdatedBy": "Dr. Patricia Moore",
+      "lastUpdatedAt": "2024-11-20T10:30:00Z"
+    },
+    "TASK-003-02-01": {
+      "id": "TASK-003-02-01",
+      "subprocessId": "SUBP-003-02",
+      "name": "Packaging Material Verification",
+      "description": "Verification of blister foils, PVC, and labels against specifications",
+      "status": "approved",
+      "lastUpdatedBy": "Linda Thompson",
+      "lastUpdatedAt": "2024-11-19T16:00:00Z"
+    },
+    "TASK-003-02-02": {
+      "id": "TASK-003-02-02",
+      "subprocessId": "SUBP-003-02",
+      "name": "Blister Line Setup",
+      "description": "Setup and calibration of blister packaging machine",
+      "status": "approved",
+      "lastUpdatedBy": "David Miller",
+      "lastUpdatedAt": "2024-11-20T08:30:00Z"
+    },
+    "TASK-003-02-03": {
+      "id": "TASK-003-02-03",
+      "subprocessId": "SUBP-003-02",
+      "name": "Blister Packaging Run",
+      "description": "Automated blister forming, filling, and sealing operation",
+      "status": "pending",
+      "lastUpdatedBy": "David Miller",
+      "lastUpdatedAt": "2024-11-20T11:00:00Z"
+    },
+    "TASK-003-02-04": {
+      "id": "TASK-003-02-04",
+      "subprocessId": "SUBP-003-02",
+      "name": "Vision Inspection",
+      "description": "Automated vision system inspection for missing or damaged tablets",
+      "status": "pending",
+      "lastUpdatedBy": "David Miller",
+      "lastUpdatedAt": "2024-11-20T11:00:00Z"
+    },
+    "TASK-003-02-05": {
+      "id": "TASK-003-02-05",
+      "subprocessId": "SUBP-003-02",
+      "name": "Seal Integrity Testing",
+      "description": "Random sampling and seal strength testing of blister packs",
+      "status": "pending",
+      "lastUpdatedBy": "Linda Thompson",
+      "lastUpdatedAt": "2024-11-20T11:00:00Z"
+    },
+    "TASK-003-03-01": {
+      "id": "TASK-003-03-01",
+      "subprocessId": "SUBP-003-03",
+      "name": "Carton Printing Verification",
+      "description": "Verification of printed cartons for correct product information and batch details",
+      "status": "pending",
+      "lastUpdatedBy": "Linda Thompson",
+      "lastUpdatedAt": "2024-11-20T11:30:00Z"
+    },
+    "TASK-003-03-02": {
+      "id": "TASK-003-03-02",
+      "subprocessId": "SUBP-003-03",
+      "name": "Cartoning Operation",
+      "description": "Automated insertion of blisters into cartons with patient information leaflet",
+      "status": "pending",
+      "lastUpdatedBy": "David Miller",
+      "lastUpdatedAt": "2024-11-20T11:30:00Z"
+    },
+    "TASK-003-03-03": {
+      "id": "TASK-003-03-03",
+      "subprocessId": "SUBP-003-03",
+      "name": "Serialization",
+      "description": "Application of unique serial numbers and 2D barcodes for track and trace",
+      "status": "pending",
+      "lastUpdatedBy": "David Miller",
+      "lastUpdatedAt": "2024-11-20T11:30:00Z"
+    },
+    "TASK-003-03-04": {
+      "id": "TASK-003-03-04",
+      "subprocessId": "SUBP-003-03",
+      "name": "Case Packing",
+      "description": "Packing of cartons into shipping cases with batch documentation",
+      "status": "pending",
+      "lastUpdatedBy": "Maria Santos",
+      "lastUpdatedAt": "2024-11-20T11:30:00Z"
+    },
+    "TASK-003-03-05": {
+      "id": "TASK-003-03-05",
+      "subprocessId": "SUBP-003-03",
+      "name": "Final Release Sampling",
+      "description": "Retention sampling and transfer to QA for final batch disposition",
+      "status": "pending",
+      "lastUpdatedBy": "Dr. Thomas Anderson",
+      "lastUpdatedAt": "2024-11-20T11:30:00Z"
+    },
+    "TASK-003-03-06": {
+      "id": "TASK-003-03-06",
+      "subprocessId": "SUBP-003-03",
+      "name": "Warehouse Transfer",
+      "description": "Transfer of finished goods to quarantine warehouse pending final release",
+      "status": "pending",
+      "lastUpdatedBy": "Maria Santos",
+      "lastUpdatedAt": "2024-11-20T11:30:00Z"
+    }
+  }
+}

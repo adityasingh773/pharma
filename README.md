@@ -34,3 +34,22 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Synthetic dataset
+
+The data.json located at data/data.json was generated using chatgpt from the following prompt:
+
+```
+Create a json dataset for a pharma SME for its modeled manufacturing process. The dataset has 3 processes. Each process has 2-3 subprocesses. Each subprocess has 3-6 tasks
+Note: Each item must have following fields:
+- id (unique)
+- name
+- description,
+- status with any of these values: "pending", "approved", "needs_fix"
+- lastUpdatedBy
+- lastUpdatedAt
+```
+
+Note: Nothing was adjusted manually in the generated dataset.
+
+The data structure in data.json was later updated to reduce time complexity of actions such as updating task status, calculate process progress, etc.
