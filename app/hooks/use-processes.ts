@@ -2,6 +2,12 @@ import { useEffect, useState } from "react";
 
 export type Status = "approved" | "needs_fix" | "pending";
 
+export type Comment = {
+  text: string;
+  user: string;
+  timestamp: string;
+};
+
 type Item = {
   id: string;
   name: string;
@@ -9,6 +15,7 @@ type Item = {
   status: Status;
   lastUpdatedBy: string;
   lastUpdatedAt: string;
+  comments?: Comment[];
 };
 
 type Task = Item & {

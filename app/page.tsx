@@ -5,6 +5,7 @@ import { Status } from "./hooks/use-processes";
 import { ItemType, useDataReducer } from "./hooks/use-data-reducer";
 import { approvedTasksInProcess, totalTasksInProcess } from "./lib/stats";
 import styles from "./page.module.css";
+import { Comments } from "./components/comments";
 
 function constructStatusString(status: Status): string | null {
   if (status == "approved") return "Approved";
@@ -45,6 +46,33 @@ export default function Home() {
     });
   };
 
+  const addComment = (itemType: ItemType, id: string, text: string) => {
+    let item;
+    if (itemType === "task") {
+      item = data.tasks[id];
+    } else if (itemType === "subprocess") {
+      item = data.subprocesses[id];
+    } else {
+      item = data.processes[id];
+    }
+
+    dispatch({
+      type: "UPDATE_ITEM",
+      itemType,
+      id,
+      payload: {
+        comments: [
+          {
+            text,
+            user: "Reviewer 1",
+            timestamp: new Date().toISOString(),
+          },
+          ...(item.comments || []),
+        ],
+      },
+    });
+  };
+
   return (
     <div className={styles.grid}>
       <div>
@@ -70,6 +98,12 @@ export default function Home() {
                 Progress: {approvedTasksInProcess(id, data)}/
                 {totalTasksInProcess(id, data)} tasks approved
               </div>
+              <Comments
+                itemType="process"
+                itemId={id}
+                comments={data.processes[id]?.comments}
+                onAddComment={addComment}
+              />
             </div>
           )
         )}
@@ -95,6 +129,12 @@ export default function Home() {
                 <p>
                   Last updated at: {new Date(lastUpdatedAt).toLocaleString()}
                 </p>
+                <Comments
+                  itemType="subprocess"
+                  itemId={id}
+                  comments={data.subprocesses[id]?.comments}
+                  onAddComment={addComment}
+                />
               </div>
             )
           )
@@ -187,6 +227,12 @@ export default function Home() {
                     Mark reviewed
                   </button>
                 </div>
+                <Comments
+                  itemType="task"
+                  itemId={id}
+                  comments={data.tasks[id]?.comments}
+                  onAddComment={addComment}
+                />
               </div>
             )
           )
