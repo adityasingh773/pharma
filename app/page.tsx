@@ -6,6 +6,7 @@ import { ItemType, useDataReducer } from "./hooks/use-data-reducer";
 import { approvedTasksInProcess, totalTasksInProcess } from "./lib/stats";
 import styles from "./page.module.css";
 import { Comments } from "./components/comments";
+import { useLocalStorage } from "./hooks/use-local-storage";
 
 function constructStatusString(status: Status): string | null {
   if (status == "approved") return "Approved";
@@ -16,6 +17,7 @@ function constructStatusString(status: Status): string | null {
 
 export default function Home() {
   const { data, loading, error, dispatch } = useDataReducer();
+  const { updateLocalStorage } = useLocalStorage();
   const [selectedProcess, setSelectedProcess] = useState<string | null>(null);
   const [selectedSubProcess, setSelectedSubProcess] = useState<string | null>(
     null
@@ -44,6 +46,7 @@ export default function Home() {
       id,
       payload,
     });
+    updateLocalStorage(itemType, id, payload);
   };
 
   const addComment = (itemType: ItemType, id: string, text: string) => {
@@ -56,21 +59,24 @@ export default function Home() {
       item = data.processes[id];
     }
 
+    const payload = {
+      comments: [
+        {
+          text,
+          user: "Reviewer 1",
+          timestamp: new Date().toISOString(),
+        },
+        ...(item.comments || []),
+      ],
+    };
+
     dispatch({
       type: "UPDATE_ITEM",
       itemType,
       id,
-      payload: {
-        comments: [
-          {
-            text,
-            user: "Reviewer 1",
-            timestamp: new Date().toISOString(),
-          },
-          ...(item.comments || []),
-        ],
-      },
+      payload,
     });
+    updateLocalStorage(itemType, id, payload);
   };
 
   return (

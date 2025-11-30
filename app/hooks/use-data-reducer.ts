@@ -1,6 +1,8 @@
 import { useReducer, useEffect } from "react";
 import { useProcesses, type ProcessesResponse } from "./use-processes";
 import { updateItemInData } from "../lib/update-item";
+import { mergeData } from "../lib/merge-data";
+import { useLocalStorage } from "./use-local-storage";
 
 export type ItemType = "task" | "subprocess" | "process";
 
@@ -35,13 +37,15 @@ function dataReducer(
 
 export function useDataReducer() {
   const { data, loading, error } = useProcesses();
+  const { localData } = useLocalStorage();
   const [state, dispatch] = useReducer(dataReducer, null);
 
   useEffect(() => {
     if (data) {
-      dispatch({ type: "SET_DATA", payload: data });
+      const mergedData = mergeData(data, localData);
+      dispatch({ type: "SET_DATA", payload: mergedData });
     }
-  }, [data]);
+  }, [data, localData]);
 
   return { data: state, loading, error, dispatch };
 }
